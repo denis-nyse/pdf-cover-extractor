@@ -25,14 +25,14 @@ def process_books(directory_name='books'):
             print(f"Обработка: {pdf_file.name}...")
 
             # Конвертируем ТОЛЬКО первую страницу (first_page=1, last_page=1) для экономии памяти
-            # Если вы на Windows и не добавили Poppler в PATH, раскомментируйте строку ниже и укажите путь:
-            # poppler_path = r'C:\Program Files\poppler-xx\bin'
+
             
+
             pages = convert_from_path(
                 pdf_file, 
                 first_page=1, 
                 last_page=1,
-                # poppler_path=poppler_path  # Добавьте этот аргумент, если нужно
+
             )
 
             if pages:
